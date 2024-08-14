@@ -23,4 +23,8 @@ export const globalStyles = StyleSheet.create({
   buttonText: {
     color: COLORS.text,
   },
+  Image: {
+    height: 200,
+    width: 100,
+  },
 });

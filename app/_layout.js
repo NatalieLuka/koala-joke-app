@@ -4,6 +4,7 @@ import { Link, router, Slot, Tabs } from "expo-router";
 import { COLORS } from "../styles/constants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FontAwesome, FontAwesome5, Fontisto } from "@expo/vector-icons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 export default function RootLayout() {
   return (
@@ -26,20 +27,22 @@ export default function RootLayout() {
         }}
       />
       <Tabs.Screen
-        name="animals"
+        name="(koalas)"
         options={{
-          title: "All Animals",
+          title: "Koalas",
           tabBarIcon: ({ color }) => {
-            return <FontAwesome5 name="paw" size={24} color={color} />;
+            return (
+              <MaterialCommunityIcons name="koala" size={24} color={color} />
+            );
           },
         }}
       />
       <Tabs.Screen
-        name="(contact)"
+        name="(jokes)"
         options={{
-          title: "Contact Us",
+          title: "Jokes",
           tabBarIcon: ({ color }) => {
-            return <Fontisto name="email" size={24} color={color} />;
+            return <FontAwesome5 name="laugh-squint" size={24} color={color} />;
           },
         }}
       />
